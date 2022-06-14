@@ -17,8 +17,8 @@ const SingleArticle = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("http://localhost:5000/api/articles/" + path);
-      // const res = await axios.get("/api/articles/" + path);
+      // const res = await axios.get("http://localhost:5000/api/articles/" + path);
+      const res = await axios.get("/api/articles/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setbody(res.data.body);
